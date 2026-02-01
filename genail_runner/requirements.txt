@@ -1,0 +1,3 @@
+requests>=2.31.0
+# GenAILanguage runtime (optional, for future compatibility)
+# git+https://github.com/NotADressMaker/GenAILanguage.git

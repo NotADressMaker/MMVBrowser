@@ -1,0 +1,20 @@
+{
+  "name": "mmv-browser",
+  "version": "0.1.0",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "dev": "node server.js",
+    "test": "jest",
+    "test:unit": "jest --runTestsByPath tests/unit",
+    "test:integration": "jest --runTestsByPath tests/integration"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "msw": "^2.2.0",
+    "supertest": "^6.3.4"
+  }
+}

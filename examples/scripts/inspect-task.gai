@@ -1,0 +1,7 @@
+# Inspect a task by ID.
+set task_id = "TASK_ID_HERE"
+set record_args = {"task_id": "TASK_ID_HERE"}
+call mmv_get_record into record with record_args
+call mmv_get_receipt into receipt with record_args
+print record
+print receipt

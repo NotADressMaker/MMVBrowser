@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MMV Browser - Scripts</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="page-header">
+      <h1>GenAIL Scripts</h1>
+      <p>
+        Run GenAIL (.gai) scripts to query MMV data. See
+        <a href="https://github.com/NotADressMaker/GenAILanguage" target="_blank" rel="noreferrer">GenAIL language docs</a>
+        for syntax (model/set/template/prompt/message/generate/call/print).
+      </p>
+    </header>
+
+    <main class="layout">
+      <section class="panel">
+        <div class="panel-header">
+          <h2>Editor</h2>
+          <div class="example-controls">
+            <label for="exampleSelect">Examples</label>
+            <select id="exampleSelect"></select>
+            <button id="loadExample">Load</button>
+          </div>
+        </div>
+        <textarea id="scriptInput" rows="16" placeholder="# Write or load a .gai script"></textarea>
+        <div class="panel-row">
+          <div class="field">
+            <label for="varsInput">Variables (JSON)</label>
+            <textarea id="varsInput" rows="4" placeholder='{ "task_id": "..." }'></textarea>
+          </div>
+          <div class="field">
+            <label class="toggle">
+              <input type="checkbox" id="allowLlm" />
+              Allow LLM summarization
+            </label>
+            <p class="hint">Available only if enabled on the server.</p>
+            <button id="runScript" class="primary">Run Script</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>Output</h2>
+        <div class="output-block">
+          <h3>Stdout</h3>
+          <pre id="stdout"></pre>
+        </div>
+        <div class="output-block">
+          <h3>Artifacts</h3>
+          <pre id="artifacts"></pre>
+        </div>
+        <div class="output-block">
+          <h3>Errors</h3>
+          <pre id="errors"></pre>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>Settings (server configured)</h2>
+        <div class="settings-grid">
+          <div class="field">
+            <label for="apiBaseUrl">API_BASE_URL</label>
+            <input id="apiBaseUrl" type="text" readonly />
+          </div>
+          <div class="field">
+            <label for="ipfsGateway">IPFS_GATEWAY</label>
+            <input id="ipfsGateway" type="text" readonly />
+          </div>
+          <div class="field">
+            <label for="rpcUrl">RPC_URL</label>
+            <input id="rpcUrl" type="text" readonly />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="/scripts.js"></script>
+  </body>
+</html>
