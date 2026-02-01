@@ -1,0 +1,7 @@
+# Fetch evidence and optionally summarize with LLM.
+call mmv_fetch_evidence into evidence with {"bundle_uri": "ipfs://BUNDLE_CID"}
+print evidence
+message system = "You are a concise analyst. Summarize the evidence JSON."
+message user = "{{evidence}}"
+generate summary
+print summary

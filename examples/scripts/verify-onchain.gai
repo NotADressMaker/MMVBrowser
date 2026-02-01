@@ -1,0 +1,9 @@
+# Verify a record against an on-chain contract.
+call mmv_verify_onchain into verification with {
+  "task_id": "TASK_ID_HERE",
+  "bundle_hash": "BUNDLE_HASH",
+  "chain_id": "CHAIN_ID",
+  "contract_address": "0xCONTRACT",
+  "rpc_url": "https://rpc.example"
+}
+print verification
